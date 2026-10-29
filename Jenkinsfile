@@ -1,12 +1,12 @@
 pipeline {
-    agent any
+    agent { label 'agent1' }
  
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-                sh 'echo "Hello Jenkins" > output.txt'
-                archiveArtifacts artifacts: 'output.txt'
+                echo 'Running on agent1'
             }
         }
     }
 }
+
