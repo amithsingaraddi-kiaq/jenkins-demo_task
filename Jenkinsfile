@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('hello') {
       steps {
-        echo 'Hello from poll SCM trigger'
+        echo 'Hello from poll SCM and webhook trigger'
       }
     }
   }
