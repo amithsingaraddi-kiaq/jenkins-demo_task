@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('hello') {
       steps {
-        echo 'Hello from jenkins pipeline'
+        echo 'Hello from poll SCM trigger'
       }
     }
   }
