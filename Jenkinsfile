@@ -1,11 +1,12 @@
 pipeline {
-  agent any
-
-  stages {
-    stage('hello') {
-      steps {
-        echo 'Hello from poll SCM and webhook trigger'
-      }
+    agent any
+ 
+    stages {
+        stage('Build') {
+            steps {
+                sh 'echo "Hello Jenkins" > output.txt'
+                archiveArtifacts artifacts: 'output.txt'
+            }
+        }
     }
-  }
 }
